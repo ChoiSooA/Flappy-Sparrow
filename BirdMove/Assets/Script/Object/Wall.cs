@@ -30,7 +30,7 @@ public class Wall : MonoBehaviour
     private void Update()
     {
         if(!theBird.isOver)
-            transform.Translate(Vector3.forward * (moveSpeed* 0.001f));
+            transform.Translate(Vector3.forward * (moveSpeed* 0.5f*Time.deltaTime));
     }
 
     public void ResetWallActive()

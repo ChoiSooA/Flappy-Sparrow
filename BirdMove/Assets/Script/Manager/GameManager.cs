@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public int highScore = 0;
 
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
 
     private void Update()
     {

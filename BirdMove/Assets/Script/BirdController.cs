@@ -37,6 +37,7 @@ public class BirdController : MonoBehaviour
         if(nowCountPos>0)
         {
             nowCountPos--;
+            StartCoroutine(MoveBird());
         }
     }
 
@@ -45,6 +46,7 @@ public class BirdController : MonoBehaviour
         if(nowCountPos<2)
         {
             nowCountPos++;
+            StartCoroutine(MoveBird());
         }
     }
 
@@ -54,6 +56,17 @@ public class BirdController : MonoBehaviour
         theBird.gameObject.GetComponent<Rigidbody>().AddForce(transform.up*250f, ForceMode.Force);
     }
 
+    IEnumerator MoveBird()
+    {
+        while (theBird.gameObject.transform.position != new Vector3(theBird.xPos[nowCountPos], theBird.gameObject.transform.position.y, theBird.gameObject.transform.position.z))
+        {
+            theBird.gameObject.transform.position = Vector3.Lerp(theBird.gameObject.transform.position,
+                                                     new Vector3(theBird.xPos[nowCountPos], theBird.gameObject.transform.position.y, theBird.gameObject.transform.position.z),
+                                                     5f * Time.deltaTime);
+            yield return new WaitForSeconds(0.01f);
+        }
+        StopCoroutine(MoveBird());
+        yield return null;
+    }
 
-    
 }

@@ -34,12 +34,7 @@ public class Bird : MonoBehaviour
         theBirdController.nowCountPos=1;
     }
 
-    private void Update()
-    {
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, 
-                                                     new Vector3(xPos[theBirdController.nowCountPos], gameObject.transform.position.y, gameObject.transform.position.z),
-                                                     0.01f);
-    }
+    
 
     public void PositionSetting()
     {
@@ -74,5 +69,6 @@ public class Bird : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         obj.gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
     }
+
 
 }
