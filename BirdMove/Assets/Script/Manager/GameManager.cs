@@ -51,9 +51,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResetData()
-    {
-        PlayerPrefs.DeleteAll();
-    }
 
 }

@@ -18,4 +18,18 @@ public class DataSave : MonoBehaviour
         txt_bronze.text = PlayerPrefs.HasKey("3") ? PlayerPrefs.GetInt("3").ToString() : "0";
         
     }
+
+    void InitScore()
+    {
+        txt_gold.text = "0";
+        txt_silver.text = "0";
+        txt_bronze.text = "0";
+    }
+
+
+    public void ResetData()
+    {
+        PlayerPrefs.DeleteAll();
+        InitScore();
+    }
 }
