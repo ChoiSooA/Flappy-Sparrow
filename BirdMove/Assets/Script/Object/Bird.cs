@@ -7,7 +7,7 @@ public class Bird : MonoBehaviour
     BirdController theBirdController;
     PlayCanvas thePlay;
     GameManager theGM;
-    WallManager theWallManager;
+    DB theDB;
 
     public Vector3 startPos;
 
@@ -20,8 +20,7 @@ public class Bird : MonoBehaviour
         theBirdController = FindObjectOfType<BirdController>();
         thePlay = FindObjectOfType<PlayCanvas>();
         theGM = FindObjectOfType<GameManager>();
-        theWallManager = FindObjectOfType<WallManager>();
-
+        theDB = FindObjectOfType<DB>();
         startPos = transform.position;
 
         PositionSetting();
@@ -29,6 +28,7 @@ public class Bird : MonoBehaviour
     public void Init()
     {
         theGM.score = 0;
+        theGM.highScore = 0;
         gameObject.transform.position = startPos;
         isOver = false;
         theBirdController.nowCountPos=1;
@@ -44,18 +44,19 @@ public class Bird : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other) //º®¿¡ ºÎµúÈú¶§
+    private void OnTriggerEnter(Collider other) //º®¿¡ ºÎµúÈú¶§(GameOver µÉ ¶§)
     {
         if (other.CompareTag("Wall"))   //GameOver Collider
         {
             other.gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
             isOver = true;
+            theDB.SetData();
             gameObject.GetComponent<Animator>().Play("Death");
             thePlay.gameoverCanvas.SetActive(true);
             thePlay.controllerCanvas.SetActive(false);
-
-            Debug.Log("GameOver");
-            theGM.Bigyo();
+            theDB.Get_Data();
+            //Debug.Log("GameOver");
+            //theGM.Bigyo();
         }
         else if (other.CompareTag("ScoreUp"))   //ScoreUp Collider
         {

@@ -1,0 +1,4 @@
+#Tue Oct 24 13:18:38 KST 2023
+base.0=C\:\\Users\\SW01\\Desktop\\GitHub\\Flappy-Sparrow\\BirdMove\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

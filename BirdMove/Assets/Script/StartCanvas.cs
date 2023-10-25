@@ -5,24 +5,30 @@ using UnityEngine.UI;
 
 public class StartCanvas : MonoBehaviour
 {
-    string playerName;
-    int playerScore;
+    GameManager theGM;
 
     [SerializeField] InputField nameField;
     [SerializeField] Button startBT;
+
+    private void Start()
+    {
+        theGM = FindObjectOfType<GameManager>();
+    }
     void Update()
     {
-        if (nameField.text != null) //이름 비었으면 unknown
-        {
-            playerName = "Unknown";
-        }else if (nameField.text.Length >= 10)  //이름 넘쳤으면 버튼 비활성을 할까
+        if (nameField.text.Length == 0) //이름 비었으면 unknown
         {
             startBT.interactable = false;
         }
         else
         {
-            playerName = nameField.text;
+            startBT.interactable = true;
+            theGM.playerName = nameField.text;
         }
+    }
+    private void OnEnable()
+    {
+        nameField.text = "";
     }
 
 }

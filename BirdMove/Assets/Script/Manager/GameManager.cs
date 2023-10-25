@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public int highScore = 0;
 
+    public string playerName;
+    public int playerScore;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -34,26 +37,8 @@ public class GameManager : MonoBehaviour
             highScore = score;
         }
     }
-    public void Bigyo()
-    {
 
-        if (PlayerPrefs.GetInt("1") < highScore)
-        {
-            PlayerPrefs.SetInt("3", PlayerPrefs.GetInt("2"));
-            PlayerPrefs.SetInt("2", PlayerPrefs.GetInt("1"));
-            PlayerPrefs.SetInt("1", highScore);
-
-        }
-        else if (PlayerPrefs.GetInt("2") < highScore)
-        {
-            PlayerPrefs.SetInt("3", PlayerPrefs.GetInt("2"));
-            PlayerPrefs.SetInt("2", highScore);
-        }
-        else if(PlayerPrefs.GetInt("3") < highScore)
-        {
-            PlayerPrefs.SetInt("3", highScore);
-        }
-    }
+    
 
 
 }

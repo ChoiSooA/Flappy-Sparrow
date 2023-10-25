@@ -21,9 +21,5 @@ public class PlayCanvas : MonoBehaviour
     {
         scoreTxt.text = "0";
 
-
-        Debug.Log("1등 데이터는 : " + PlayerPrefs.GetInt("1"));
-        Debug.Log("2등 데이터는 : " + PlayerPrefs.GetInt("2"));
-        Debug.Log("3등 데이터는 : " + PlayerPrefs.GetInt("3"));
     }
 }

@@ -128,6 +128,15 @@
 -define:PACKAGE_UITOOLKIT
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/I18N.CJK.dll"
+-r:"Assets/Plugins/I18N.dll"
+-r:"Assets/Plugins/I18N.MidEast.dll"
+-r:"Assets/Plugins/I18N.Other.dll"
+-r:"Assets/Plugins/I18N.Rare.dll"
+-r:"Assets/Plugins/I18N.West.dll"
+-r:"Assets/Plugins/LitJson.dll"
+-r:"Assets/Plugins/MySql.Data.dll"
+-r:"Assets/Plugins/zxing.unity.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -337,7 +346,7 @@
 -r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.collab-proxy@1.17.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.collab-proxy@1.17.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
 -r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.collab-proxy@1.17.2/Lib/Editor/PlasticSCM/unityplastic.dll"
--r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll"
 -r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll"
 -r:"C:/Users/SW01/Desktop/GitHub/Flappy-Sparrow/BirdMove/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
